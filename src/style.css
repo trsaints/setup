@@ -1,0 +1,86 @@
+:root {
+    --base-color: ivory;
+    --border-color: rgba(255, 255, 240, 0.705);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: linear-gradient(#555, #555) 100%;
+}
+
+body {
+    background-position: center;
+    min-height: 100vh;
+    color: var(--base-color);
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+
+    /* set content to center with grid */
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+body, a, input, button, textarea {
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2 {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.time {
+    font-size: 3em;
+    display: block;
+    width: 100%;
+}
+
+.welcome {
+    font-size: 0.7em;
+}
+
+#userName {
+    display: inline-block;
+    background: inherit;
+    border: none;
+    font-size: inherit;
+    min-width: 3ch;
+ }
+
+.date,
+.time,
+.greeting-time {
+    margin-bottom: 1rem;
+}
+
+.focus-answer {
+    border: 2px solid var(--border-color);
+    background: inherit;
+    text-align: center;
+    height: 3em;
+}
+
+/* font size grows as screen gets bigger */
+@media (min-width: 40em) {
+    .date {
+        font-size: 1em;
+    }
+    
+    .time {
+        font-size: 4em;
+    }
+
+    .welcome {
+        font-size: .8em;
+    }
+
+    .focus-answer {
+        font-size: 1em;
+    }
+}
