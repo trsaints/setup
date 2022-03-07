@@ -9,24 +9,19 @@
     box-sizing: border-box;
 }
 
-html {
-    background: linear-gradient(#555, #555) 100%;
-}
-
 body {
-    background-position: center;
     min-height: 100vh;
     color: var(--base-color);
     border-top: 2px solid var(--border-color);
     border-bottom: 2px solid var(--border-color);
-
+    background-repeat: no-repeat;
     /* set content to center with grid */
     display: grid;
     place-items: center;
     text-align: center;
 }
 
-body, a, input, button, textarea {
+body * {
     font-family: "Poppins", sans-serif;
 }
 
@@ -35,23 +30,24 @@ h1, h2 {
     letter-spacing: 1px;
 }
 
+a {
+    text-decoration: none;
+    color:rgb(127, 252, 252);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(96, 199, 199)
+}
+
 .time {
     font-size: 3em;
     display: block;
-    width: 100%;
 }
 
 .welcome {
     font-size: 0.7em;
 }
-
-#userName {
-    display: inline-block;
-    background: inherit;
-    border: none;
-    font-size: inherit;
-    min-width: 3ch;
- }
 
 .date,
 .time,
@@ -59,8 +55,22 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
+.user-name {
+    min-width: 3ch;
+    font-size: inherit;
+    border: none;
+    background: inherit;
+    color: rgb(127, 252, 252);
+}
+
+.user-name:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
 .focus-answer {
     border: 2px solid var(--border-color);
+    color: var(--base-color);
     background: inherit;
     text-align: center;
     height: 3em;
