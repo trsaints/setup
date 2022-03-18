@@ -18,8 +18,9 @@ function showTime() {
 
   // show "AM" after time if it's morning, otherwise show "PM" instead.
   function periodOfDay() {
+    let normalHours = today.getHours();
     let hoursPeriod;
-    if (hours < 12) {
+    if (normalHours < 12) {
       hoursPeriod = "A.M.";
     } else {
       hoursPeriod = "P.M.";
