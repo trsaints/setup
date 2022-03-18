@@ -59,7 +59,7 @@ function periodBackground() {
       <p>Bom dia, <input type="text" id="userName" class="user-name"></input>.
       <br />
       Qual é o seu foco hoje?</p>`
-  } else if (periodHour > 12 || periodHour < 18) {
+  } else if (periodHour > 12 && periodHour < 18) {
     document.body.style.background = 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 100%), url("./img/afternoon.jpg")';
     greetingTime.innerHTML = `
       <p>Boa tarde, <input type="text" id="userName" class="user-name"></input>.
